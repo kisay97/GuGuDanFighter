@@ -7,46 +7,61 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/bg_color_dialog_transparent"
     tools:context="com.estsoft.gugudanfighter.ResultActivity">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="다시 게임을 시작하시겠습니까?"
-        android:id="@+id/resultText"
+    <RelativeLayout
+        android:layout_width="230dp"
+        android:layout_height="150dp"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yes"
-        android:id="@+id/restartYesButton"
-        android:layout_marginTop="10dp"
-        android:layout_below="@+id/resultText"
-        android:layout_alignRight="@+id/resultText"
-        android:layout_alignEnd="@+id/resultText"
-        android:layout_marginRight="30dp"
-        android:layout_marginEnd="30dp" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="No"
-        android:id="@+id/restartNoButton"
-        android:layout_alignBottom="@+id/restartYesButton"
-        android:layout_toLeftOf="@+id/restartYesButton"
-        android:layout_toStartOf="@+id/restartYesButton" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="맞춘개수 20/21"
-        android:id="@+id/resultLabel"
-        android:layout_above="@+id/resultText"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp" />
+        android:id="@+id/resultLayout"
+        android:background="@drawable/border_result_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="맞춘개수 20/21"
+            android:id="@+id/resultLabel"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="다시 게임을 시작하시겠습니까?"
+            android:id="@+id/resultText"
+            android:textAlignment="center"
+            android:layout_below="@+id/resultLabel"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/restartYesButton"
+            android:layout_alignTop="@+id/restartNoButton"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="25dp"
+            android:background="@drawable/result_button_drawable"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/restartNoButton"
+            android:layout_below="@+id/resultText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="25dp"
+            android:background="@drawable/result_button_drawable"/>
+    </RelativeLayout>
+
 </RelativeLayout>

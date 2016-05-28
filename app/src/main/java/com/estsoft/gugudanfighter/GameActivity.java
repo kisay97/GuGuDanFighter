@@ -30,7 +30,7 @@ public class GameActivity extends AppCompatActivity {
         }
     };
 
-    private int totalQuizCcount = 0;        //문제 총 갯수
+    private int totalQuizCcount = -1;        //문제 총 갯수
     private int correctQuizCount = 0;       //맞은 문제 수
     private int lValue = 0;                  //문제의 왼쪽 숫자
     private int rValue = 0;                  //문제의 오른쪽 숫자
@@ -61,7 +61,7 @@ public class GameActivity extends AppCompatActivity {
 
     protected void setUI(){
         ((TextView)findViewById(R.id.textView6)).setText("" + correctQuizCount + "/" + totalQuizCcount);
-        ((TextView)findViewById(R.id.timeText)).setText("" + 60);
+        ((TextView)findViewById(R.id.timeText)).setText("" + 20);
         initNumberButton();
         setNumberButtonListener();
     }
@@ -148,7 +148,7 @@ public class GameActivity extends AppCompatActivity {
     }
 
     private class MyTimerTask extends TimerTask {
-        private int restTime = 10; //남은 시간
+        private int restTime = 20; //남은 시간
 
         @Override
         public void run() {

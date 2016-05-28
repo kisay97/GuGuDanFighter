@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.estsoft.gugudanfighter.RecordActivity">
+    tools:context="com.estsoft.gugudanfighter.RecordActivity"
+    android:background="@drawable/main_background">
 
     <TextView
         android:layout_width="wrap_content"
@@ -17,7 +18,8 @@
         android:id="@+id/recordLabel"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp" />
+        android:layout_marginTop="50dp"
+        android:textColor="#fff"/>
 
     <ListView
         android:layout_width="wrap_content"
@@ -25,5 +27,6 @@
         android:id="@+id/recordListView"
         android:layout_below="@+id/recordLabel"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_marginTop="30dp"
+        android:background="#fff"/>
 </RelativeLayout>

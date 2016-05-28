@@ -18,7 +18,8 @@
         <activity android:name=".GameActivity" />
         <activity android:name=".HelpActivity" />
         <activity android:name=".RecordActivity" />
-        <activity android:name=".ResultActivity"></activity>
+        <activity android:name=".ResultActivity"
+            android:theme="@style/TransparentTheme"/>
     </application>
 
 </manifest>
